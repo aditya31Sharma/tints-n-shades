@@ -5,7 +5,6 @@ import Values from 'values.js'
 function App() {
 
   const [color,setColor] = useState('');
-  const [error,setError] = useState(false);
   const [list,setList]= useState(new Values('#40E0D0').all(10));
 
   const handleSubmit=(e)=>{
@@ -15,8 +14,6 @@ function App() {
       setList(colors);
     }
     catch(error){
-      setError(true);
-      console.log(error);
       alert("You must enter a hex color code.");
       window.location.reload();
     }
